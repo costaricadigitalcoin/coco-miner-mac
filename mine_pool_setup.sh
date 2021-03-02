@@ -6,7 +6,7 @@ if [ ${#wallet} -gt 34 ]
 then
    echo "Direccion incorrecta"
    exit
-elif [ ${#wallet} -lt 34 ]
+elif [ ${#wallet} -lt 33 ]
 then
    echo "Direccion incorrecta"
    exit
