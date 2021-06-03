@@ -1,6 +1,5 @@
 #!/bin/sh
-#./cpuminer -a X11 -o stratum+tcp://51.81.86.5:3008 -u QUZhy18v8G9HYtBA7kwXvFKVhS4AgnWHL -p anything
-echo "Bienvenido al configurador del minado de Costa Rica Digital Coin\n\nRequisitos:\n1) Dirección de billetera de COCO (puedes obtenerla al registrase en https://wallet.costaricadigitalcoin.com)\n\nPor favor ingrese la dirección de su billetera para recibir los COCO minados"
+echo "Bienvenido al configurador del minado de COCOCR\n\nRequisitos:\n1) Dirección de billetera de COCO (puedes obtenerla desde alguna de nuestras billeteras que se encuentran disponibles en https://github.com/costaricadigitalcoin?tab=repositories)\n\nPor favor ingrese la dirección de su billetera para recibir los COCOCR minados"
 read wallet
 if [ ${#wallet} -gt 34 ]
 then
@@ -14,7 +13,7 @@ else
    echo "Direccion correcta"
 fi
 touch mine_pool.sh
-echo "#!/bin/sh\n./cpuminer -a X11 -o stratum+tcp://costaricadigitalcoin.com:3008 -u $wallet -p anything" > mine_pool.sh
+echo "#!/bin/sh\n./cpuminer -a X11 -o stratum+tcp://miningpool.costaricadigitalcoin.com:3008 -u $wallet -p anything" > mine_pool.sh
 chmod +x mine_pool.sh
 curl https://www.costaricadigitalcoin.com/wp-content/uploads/2020/12/cpuminer-osx.zip -o cpuminer-osx.zip
 tar -xvzf "cpuminer-osx.zip"
